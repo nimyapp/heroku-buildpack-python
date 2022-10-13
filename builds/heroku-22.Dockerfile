@@ -16,5 +16,6 @@ WORKDIR /app
 
 COPY requirements.txt /app/
 RUN pip3 install --disable-pip-version-check --no-cache-dir -r /app/requirements.txt
+RUN prisma generate
 
 COPY . /app
