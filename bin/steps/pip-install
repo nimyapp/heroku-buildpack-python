@@ -43,6 +43,7 @@ if [ ! "$SKIP_PIP_INSTALL" ]; then
     /app/.heroku/python/bin/pip freeze --disable-pip-version-check > .heroku/python/requirements-installed.txt
     
     prisma generate
+    prisma py fetch
 
     # Install test dependencies, for CI.
     if [ "$INSTALL_TEST" ]; then
